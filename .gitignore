@@ -1,0 +1,17 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+### Others ###
+/**/.mvn/
+/**/.gradle/
+/**/target/
+/**/out/
+/**/build/
+/**/.DS_Store/
+
