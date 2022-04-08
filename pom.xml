@@ -6,11 +6,31 @@
 
     <groupId>cn.xiuminglee.mdsl</groupId>
     <artifactId>parent</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
+    <name>MDSL</name>
+
+
+
+    <modules>
+        <module>parser</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <antlr.version>4.9.3</antlr.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- antlr4-runtime -->
+            <dependency>
+                <groupId>org.antlr</groupId>
+                <artifactId>antlr4-runtime</artifactId>
+                <version>${antlr.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
