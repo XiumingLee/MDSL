@@ -1,3 +1,4 @@
+----- 第一个
 -- `with xx as ()` 是SQL的语法。
 --把MODEL换成TABLE就是标准的SQL，该SQL来自：https://cloud.google.com/bigquery-ml/docs/kmeans-tutorial?hl=zh-cn
 CREATE OR REPLACE MODEL
@@ -45,3 +46,18 @@ SELECT
     * EXCEPT(STATION_NAME, ISWEEKDAY)
 FROM
   STATIONSTATS
+
+--- 第二个
+---- MODEL换成TABLE就是标准的SQL，来自：https://cloud.google.com/bigquery-ml/docs/create-machine-learning-model?hl=zh-cn#step_two_create_your_model
+CREATE MODEL `BQML_TUTORIAL.SAMPLE_MODEL`
+OPTIONS(MODEL_TYPE='LOGISTIC_REG') AS
+SELECT
+    IF(TOTALS.TRANSACTIONS IS NULL, 0, 1) AS LABEL,
+    IFNULL(DEVICE.OPERATINGSYSTEM, "") AS OS,
+    DEVICE.ISMOBILE AS IS_MOBILE,
+    IFNULL(GEONETWORK.COUNTRY, "") AS COUNTRY,
+    IFNULL(TOTALS.PAGEVIEWS, 0) AS PAGEVIEWS
+FROM
+    `BIGQUERY-PUBLIC-DATA.GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_*`
+WHERE
+    _TABLE_SUFFIX BETWEEN '20160801' AND '20170630'
