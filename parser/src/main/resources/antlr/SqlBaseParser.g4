@@ -363,6 +363,7 @@ tableProvider
 
 createTableClauses
     :((OPTIONS options=propertyList) |
+     (WITH info=propertyList) |    // @author Xiuming Lee，添加创建Table是附加信息的支持
      (PARTITIONED BY partitioning=partitionFieldList) |
      skewSpec |
      bucketSpec |
