@@ -1,5 +1,5 @@
-// Generated from E:/me/code/MyGitHub/MDSL/parser/src/main/resources/rule/spark\SqlBaseLexer.g4 by ANTLR 4.9.2
-package cn.xiuminglee.mdsl.parser.spark;
+// Generated from /Users/xiuming/me/code/MyGithub/MDSL/parser/src/main/resources/antlr/SqlBaseLexer.g4 by ANTLR 4.9.2
+package antlr;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
