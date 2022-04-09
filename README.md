@@ -3,6 +3,44 @@
 
 
 
+## 步骤
+
+```shell
+### 1、使用什么解释器
+use xxx;
+
+### 2、创建数据源
+creat table table_name (
+	xxx int,
+	xxx string,
+) with (
+	'connector' = 'hive',
+	xxx = xxx
+);
+
+### 3、特征工程
+[insert int table_name_b]
+select xxxx,COUNT(*) as bbb from table_name_a where xxx = xxx;
+
+### 4、创建模型
+create or replace model model_name 
+options(xxx=xxx) as ....;
+
+### 5、使用模型
+[insert int table_name_c]
+select xxxx from ML.PREDICT(MODEL `model_name`,xxxxxsql);
+
+### 6、保存数据
+INSERT { INTO | OVERWRITE } [catalog_name.][db_name.]table_name [PARTITION part_spec] [column_list] select_statement
+part_spec:
+  (part_col_name1=val1 [, part_col_name2=val2, ...])
+column_list:
+  (col_name1 [, column_name2, ...])
+```
+
+
+
+
 ## 参考
 
 - [Apache Flink Table SQL](https://nightlies.apache.org/flink/flink-docs-release-1.14/docs/dev/table/overview/)
