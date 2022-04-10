@@ -26,8 +26,8 @@ select xxxx,COUNT(*) as bbb from table_name_a where xxx = xxx;
 create or replace model model_name 
 options(xxx=xxx) as ....;
 
-### 5、使用模型（待补充antlr）
-insert into table_name_c
+### 5、使用模型进行预测（待补充antlr）
+predict into table_name_c
 select a,b,c from ml.predict(model `model_name`,select d,e,f from t1); 
 
 ### 6、保存数据
