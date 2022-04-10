@@ -312,6 +312,11 @@ insertInto
     | INSERT OVERWRITE LOCAL? DIRECTORY (path=STRING)? tableProvider (OPTIONS options=propertyList)?        #insertOverwriteDir
     ;
 
+// 新加transformInto，特征工程使用
+transformInto
+    : TRANSFORM INTO TABLE? multipartIdentifier partitionSpec? (IF NOT EXISTS)? identifierList?                #transformIntoTable
+    ;
+
 partitionSpecLocation
     : partitionSpec locationSpec?
     ;
@@ -423,6 +428,7 @@ resource
 
 dmlStatementNoWith
     : insertInto query                                                             #singleInsertQuery
+    | transformInto query                                                          #singleTransformQuery
     | fromClause multiInsertQueryBody+                                             #multiInsertQuery
     | DELETE FROM multipartIdentifier tableAlias whereClause?                      #deleteFromTable
     | UPDATE multipartIdentifier tableAlias setClause whereClause?                 #updateTable
