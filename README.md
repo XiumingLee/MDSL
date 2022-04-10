@@ -19,23 +19,23 @@ creat table table_name (
 );
 
 ### 3、特征工程
-[insert int table_name_b]
+transform into table_name_b
 select xxxx,COUNT(*) as bbb from table_name_a where xxx = xxx;
 
-### 4、创建模型
+### 4、创建模型（待补充antlr）
 create or replace model model_name 
 options(xxx=xxx) as ....;
 
-### 5、使用模型
-[insert int table_name_c]
-select xxxx from ML.PREDICT(MODEL `model_name`,xxxxxsql);
+### 5、使用模型（待补充antlr）
+insert into table_name_c
+select a,b,c from ml.predict(model `model_name`,select d,e,f from t1); 
 
 ### 6、保存数据
-INSERT { INTO | OVERWRITE } [catalog_name.][db_name.]table_name [PARTITION part_spec] [column_list] select_statement
-part_spec:
-  (part_col_name1=val1 [, part_col_name2=val2, ...])
-column_list:
-  (col_name1 [, column_name2, ...])
+INSERT { INTO | OVERWRITE } [catalog_name.][db_name.]table_name [PARTITION part_spec] [column_list] 
+select_statement
+
+### (待定)是否需要一个查看语句？例如：
+show select xxxx,COUNT(*) as bbb from table_name_a where xxx = xxx;
 ```
 
 

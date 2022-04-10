@@ -645,6 +645,13 @@ public interface SqlBaseParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitInsertOverwriteDir(SqlBaseParser.InsertOverwriteDirContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code transformIntoTable}
+	 * labeled alternative in {@link SqlBaseParser#transformInto}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTransformIntoTable(SqlBaseParser.TransformIntoTableContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link SqlBaseParser#partitionSpecLocation}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -785,6 +792,13 @@ public interface SqlBaseParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitSingleInsertQuery(SqlBaseParser.SingleInsertQueryContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code singleTransformQuery}
+	 * labeled alternative in {@link SqlBaseParser#dmlStatementNoWith}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSingleTransformQuery(SqlBaseParser.SingleTransformQueryContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code multiInsertQuery}
 	 * labeled alternative in {@link SqlBaseParser#dmlStatementNoWith}.

@@ -668,6 +668,13 @@ public class SqlBaseParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imp
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitTransformIntoTable(SqlBaseParser.TransformIntoTableContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitPartitionSpecLocation(SqlBaseParser.PartitionSpecLocationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
@@ -823,6 +830,13 @@ public class SqlBaseParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imp
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitSingleInsertQuery(SqlBaseParser.SingleInsertQueryContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitSingleTransformQuery(SqlBaseParser.SingleTransformQueryContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

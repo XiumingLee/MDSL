@@ -1090,6 +1090,18 @@ public interface SqlBaseParserListener extends ParseTreeListener {
 	 */
 	void exitInsertOverwriteDir(SqlBaseParser.InsertOverwriteDirContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code transformIntoTable}
+	 * labeled alternative in {@link SqlBaseParser#transformInto}.
+	 * @param ctx the parse tree
+	 */
+	void enterTransformIntoTable(SqlBaseParser.TransformIntoTableContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code transformIntoTable}
+	 * labeled alternative in {@link SqlBaseParser#transformInto}.
+	 * @param ctx the parse tree
+	 */
+	void exitTransformIntoTable(SqlBaseParser.TransformIntoTableContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link SqlBaseParser#partitionSpecLocation}.
 	 * @param ctx the parse tree
 	 */
@@ -1325,6 +1337,18 @@ public interface SqlBaseParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitSingleInsertQuery(SqlBaseParser.SingleInsertQueryContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code singleTransformQuery}
+	 * labeled alternative in {@link SqlBaseParser#dmlStatementNoWith}.
+	 * @param ctx the parse tree
+	 */
+	void enterSingleTransformQuery(SqlBaseParser.SingleTransformQueryContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code singleTransformQuery}
+	 * labeled alternative in {@link SqlBaseParser#dmlStatementNoWith}.
+	 * @param ctx the parse tree
+	 */
+	void exitSingleTransformQuery(SqlBaseParser.SingleTransformQueryContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code multiInsertQuery}
 	 * labeled alternative in {@link SqlBaseParser#dmlStatementNoWith}.

@@ -1132,6 +1132,18 @@ public class SqlBaseParserBaseListener implements SqlBaseParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterTransformIntoTable(SqlBaseParser.TransformIntoTableContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTransformIntoTable(SqlBaseParser.TransformIntoTableContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterPartitionSpecLocation(SqlBaseParser.PartitionSpecLocationContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -1403,6 +1415,18 @@ public class SqlBaseParserBaseListener implements SqlBaseParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitSingleInsertQuery(SqlBaseParser.SingleInsertQueryContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSingleTransformQuery(SqlBaseParser.SingleTransformQueryContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSingleTransformQuery(SqlBaseParser.SingleTransformQueryContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

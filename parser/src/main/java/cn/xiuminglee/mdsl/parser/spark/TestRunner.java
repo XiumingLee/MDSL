@@ -25,17 +25,5 @@ public class TestRunner {
 
         // SELECTID,NAME,AGEFROMSTUDENTWHEREIDIN(1001,1002)
 
-        /*
-
-
-        CREATE TABLE T (
-  `USER_ID` BIGINT,
-  `NAME` STRING,
-  `RECORD_TIME` TIMESTAMP,
-) WITH (
-  'CONNECTOR'='KAFKA'
-);
-        */
-
     }
 }
