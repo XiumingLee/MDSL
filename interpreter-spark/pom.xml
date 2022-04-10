@@ -16,4 +16,17 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.xiuminglee.mdsl</groupId>
+            <artifactId>core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.xiuminglee.mdsl</groupId>
+            <artifactId>parser</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
 </project>

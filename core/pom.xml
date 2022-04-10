@@ -12,8 +12,6 @@
     <artifactId>core</artifactId>
 
 
-    <description>解释器</description>
-
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
