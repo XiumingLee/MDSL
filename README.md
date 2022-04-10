@@ -7,7 +7,7 @@
 
 ```shell
 ### 1、使用什么解释器
-use xxx;
+use interpreter spark;
 
 ### 2、创建数据源
 creat table table_name (

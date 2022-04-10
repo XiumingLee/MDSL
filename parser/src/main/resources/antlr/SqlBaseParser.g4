@@ -329,6 +329,7 @@ namespace
     : NAMESPACE
     | DATABASE
     | SCHEMA
+    | INTERPRETER   // 解释器
     ;
 
 namespaces
