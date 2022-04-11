@@ -20,7 +20,6 @@
         <dependency>
             <groupId>cn.xiuminglee.mdsl</groupId>
             <artifactId>interpreter-spark</artifactId>
-            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

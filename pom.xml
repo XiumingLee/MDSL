@@ -36,6 +36,29 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>cn.xiuminglee.mdsl</groupId>
+                <artifactId>core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.xiuminglee.mdsl</groupId>
+                <artifactId>parser</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.xiuminglee.mdsl</groupId>
+                <artifactId>interpreter-spark</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.xiuminglee.mdsl</groupId>
+                <artifactId>mdsl-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- antlr4-runtime -->
             <dependency>
                 <groupId>org.antlr</groupId>

@@ -18,6 +18,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>cn.xiuminglee.mdsl</groupId>
+            <artifactId>core</artifactId>
+        </dependency>
+
+
+        <dependency>
             <groupId>org.antlr</groupId>
             <artifactId>antlr4-runtime</artifactId>
         </dependency>
