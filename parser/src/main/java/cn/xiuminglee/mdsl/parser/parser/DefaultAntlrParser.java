@@ -18,16 +18,19 @@
 
 package cn.xiuminglee.mdsl.parser.parser;
 
-import cn.xiuminglee.mdsl.core.expression.Expression;
 import cn.xiuminglee.mdsl.core.interpreter.Interpreter;
+import cn.xiuminglee.mdsl.core.interpreter.InterpreterFactory;
 import cn.xiuminglee.mdsl.core.parser.Parser;
+import cn.xiuminglee.mdsl.core.request.Request;
 
 /**
  * @author Xiuming Lee
  */
 public class DefaultAntlrParser implements Parser {
+
     @Override
-    public Object parse(Expression expression, Interpreter interpreter) {
+    public Object parse(Request request) {
+        Interpreter interpreter = InterpreterFactory.get(request.getInterpreterType());
         return null;
     }
 }

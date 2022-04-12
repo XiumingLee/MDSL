@@ -20,6 +20,7 @@ package cn.xiuminglee.mdsl.core.parser;
 
 import cn.xiuminglee.mdsl.core.expression.Expression;
 import cn.xiuminglee.mdsl.core.interpreter.Interpreter;
+import cn.xiuminglee.mdsl.core.request.Request;
 
 /**
  * @author Xiuming Lee
@@ -28,14 +29,13 @@ public interface Parser {
 
     /**
      * 表达式解析与解释.
-     * @param expression 表达式
-     * @param interpreter 解释器
+     * @param request 请求数据
      * @return
      * TODO：由于一个分析流程存在多个表达式语句，每个表达式会走一遍解释器，并返回相应的翻译语句。
      * 多个表达式，会有多个返回语句，而且多个表达式可能可能会存在上下的联动关系，所以此方法中需要
      * 思考下一句表达式的翻译是否需要上一句表达式的某些内容。还要思考不同表达式的翻译顺序。是否需要提取
      * 公共变量，供不同表达式翻译时使用。
      */
-    Object parse(Expression expression, Interpreter interpreter);
+    Object parse(Request request);
 
 }
