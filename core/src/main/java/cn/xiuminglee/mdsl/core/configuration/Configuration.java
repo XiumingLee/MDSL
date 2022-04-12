@@ -16,20 +16,16 @@
  * or have any questions.
  */
 
-package cn.xiuminglee.mdsl.parser;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Configuration;
+package cn.xiuminglee.mdsl.core.configuration;
 
 /**
  * @author Xiuming Lee
- * @date 2022/4/8 13:47
- * @desc
+ * 配置：
+ * 1、环境配置
+ * 2、Source配置
+ * 3、Sink配置
+ * 4、过程特殊参数配置
+ * ......等
  */
-@SpringBootApplication
-public class App {
-    public static void main(String[] args) {
-        SpringApplication.run(App.class,args);
-    }
+public interface Configuration {
 }

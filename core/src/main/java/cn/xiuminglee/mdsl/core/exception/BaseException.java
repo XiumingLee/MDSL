@@ -16,20 +16,35 @@
  * or have any questions.
  */
 
-package cn.xiuminglee.mdsl.parser;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Configuration;
+package cn.xiuminglee.mdsl.core.exception;
 
 /**
  * @author Xiuming Lee
- * @date 2022/4/8 13:47
- * @desc
  */
-@SpringBootApplication
-public class App {
-    public static void main(String[] args) {
-        SpringApplication.run(App.class,args);
+public class BaseException extends RuntimeException{
+
+    /**
+     * MDSL 错误
+     */
+    private final Error error;
+
+
+    /**
+     * 获取BaseException中的错误
+     * @return
+     */
+    public Error getError() {
+        return error;
+    }
+
+
+    public BaseException(Error error) {
+        super(error.cause());
+        this.error = error;
+    }
+
+    public BaseException(Error error,Throwable cause) {
+        super(error.cause(),cause);
+        this.error = error;
     }
 }

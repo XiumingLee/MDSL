@@ -16,20 +16,32 @@
  * or have any questions.
  */
 
-package cn.xiuminglee.mdsl.parser;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Configuration;
-
+package cn.xiuminglee.mdsl.parser.exception;
+import cn.xiuminglee.mdsl.core.exception.Error;
 /**
  * @author Xiuming Lee
- * @date 2022/4/8 13:47
- * @desc
  */
-@SpringBootApplication
-public class App {
-    public static void main(String[] args) {
-        SpringApplication.run(App.class,args);
+public enum ParseError implements Error {
+
+    /** 解析错误 */
+    PARSE_ERROR("parse_error","解析错误！");
+
+
+    private final String code;
+    private final String cause;
+
+    ParseError(String code, String cause) {
+        this.code = code;
+        this.cause = cause;
+    }
+
+    @Override
+    public String code() {
+        return code;
+    }
+
+    @Override
+    public String cause() {
+        return cause;
     }
 }

@@ -16,20 +16,24 @@
  * or have any questions.
  */
 
-package cn.xiuminglee.mdsl.parser;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Configuration;
+package cn.xiuminglee.mdsl.core.exception;
 
 /**
  * @author Xiuming Lee
- * @date 2022/4/8 13:47
- * @desc
  */
-@SpringBootApplication
-public class App {
-    public static void main(String[] args) {
-        SpringApplication.run(App.class,args);
-    }
+public interface Error {
+
+
+    /**
+     * 获取错误码
+     * @return {@link String}
+     */
+    String code();
+
+    /**
+     * 获取错误信息
+     * @return {@link String}
+     */
+    String cause();
+
 }

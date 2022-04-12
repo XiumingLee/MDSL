@@ -16,20 +16,20 @@
  * or have any questions.
  */
 
-package cn.xiuminglee.mdsl.parser;
+package cn.xiuminglee.mdsl.parser.exception;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Configuration;
+import cn.xiuminglee.mdsl.core.exception.BaseException;
 
 /**
  * @author Xiuming Lee
- * @date 2022/4/8 13:47
- * @desc
  */
-@SpringBootApplication
-public class App {
-    public static void main(String[] args) {
-        SpringApplication.run(App.class,args);
+public class ParseException extends BaseException {
+
+    public ParseException(ParseError error) {
+        super(error);
+    }
+
+    public ParseException(ParseError error, Throwable cause) {
+        super(error,cause);
     }
 }

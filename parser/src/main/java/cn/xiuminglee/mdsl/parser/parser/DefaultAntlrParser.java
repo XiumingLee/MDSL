@@ -16,20 +16,18 @@
  * or have any questions.
  */
 
-package cn.xiuminglee.mdsl.parser;
+package cn.xiuminglee.mdsl.parser.parser;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Configuration;
+import cn.xiuminglee.mdsl.core.expression.Expression;
+import cn.xiuminglee.mdsl.core.interpreter.Interpreter;
+import cn.xiuminglee.mdsl.core.parser.Parser;
 
 /**
  * @author Xiuming Lee
- * @date 2022/4/8 13:47
- * @desc
  */
-@SpringBootApplication
-public class App {
-    public static void main(String[] args) {
-        SpringApplication.run(App.class,args);
+public class DefaultAntlrParser implements Parser {
+    @Override
+    public Object parse(Expression expression, Interpreter interpreter) {
+        return null;
     }
 }
