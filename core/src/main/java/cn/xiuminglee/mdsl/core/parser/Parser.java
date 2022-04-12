@@ -18,8 +18,6 @@
 
 package cn.xiuminglee.mdsl.core.parser;
 
-import cn.xiuminglee.mdsl.core.expression.Expression;
-import cn.xiuminglee.mdsl.core.interpreter.Interpreter;
 import cn.xiuminglee.mdsl.core.request.Request;
 
 /**

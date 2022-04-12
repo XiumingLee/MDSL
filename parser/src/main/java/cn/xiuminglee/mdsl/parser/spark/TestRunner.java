@@ -29,13 +29,17 @@ import org.antlr.v4.runtime.CommonTokenStream;
  */
 public class TestRunner {
     public static void main(String[] args) {
-        String command =
-                "select id,name,age from student where id in (1001,1002);";
+        //String command = "select id,name,age from student where id in (1001,1002);";
+        String command = "select id,name,age ， student where id in (1001,1002);";
         SqlBaseLexer sqlBaseLexer = new SqlBaseLexer(new UpperCaseCharStream(CharStreams.fromString(command)));
 
         CommonTokenStream tokenStream = new CommonTokenStream(sqlBaseLexer);
         SqlBaseParser parser = new SqlBaseParser(tokenStream);
         parser.addParseListener(new TestListener());
+        // 移除默认的错误监听器
+        parser.removeErrorListeners();
+        // 使用自定义的错误监听器
+        parser.addErrorListener(new TestErrorListener());
 
         TestVisitor testVisitor = new TestVisitor();
         testVisitor.visitSingleStatement(parser.singleStatement());
