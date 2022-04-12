@@ -18,9 +18,18 @@
 
 package cn.xiuminglee.mdsl.core.expression;
 
+import java.util.List;
+
 /**
  * @author Xiuming Lee
  * MDSL的类SQL语言叫做Expression(表达式)。
  */
-public class Expression {
+public interface Expression {
+
+
+    /**
+     * 获取所有的语句
+     * @return
+     */
+    List<String> getStatements();
 }

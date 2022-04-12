@@ -18,6 +18,8 @@
 
 package cn.xiuminglee.mdsl.core.interpreter;
 
+import java.util.Objects;
+
 /**
  * @author xiuming
  * 解释器类型
@@ -31,6 +33,18 @@ public enum InterpreterType {
 
     InterpreterType(String value) {
         this.value = value;
+    }
+
+    public static InterpreterType create(Object value) {
+        final String stringValue = value.toString();
+        for (InterpreterType item : values()) {
+            if (Objects.equals(stringValue, item.getValue())) {
+                return item;
+            }else if (Objects.equals(stringValue, item.name())) {
+                return item;
+            }
+        }
+        return null;
     }
 
     public String getValue() {
