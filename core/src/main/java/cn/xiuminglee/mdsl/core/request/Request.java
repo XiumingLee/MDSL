@@ -47,9 +47,6 @@ public class Request {
         return statements;
     }
 
-    public void setStatements(List<String> statements) {
-        this.statements = statements;
-    }
 
     public InterpreterType getInterpreterType() {
         return interpreterType;

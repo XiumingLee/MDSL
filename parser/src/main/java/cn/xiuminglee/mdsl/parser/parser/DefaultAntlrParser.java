@@ -28,6 +28,12 @@ import cn.xiuminglee.mdsl.core.request.Request;
  */
 public class DefaultAntlrParser implements Parser {
 
+    /**
+     * 1、根据InterpreterType获取Interpreter；
+     * 2、todo:注意验证语句的标准性。
+     * @param request 请求数据
+     * @return
+     */
     @Override
     public Object parse(Request request) {
         Interpreter interpreter = InterpreterFactory.get(request.getInterpreterType());
